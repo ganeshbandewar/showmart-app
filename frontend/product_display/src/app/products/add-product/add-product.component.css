@@ -1,0 +1,21 @@
+.marginb{
+    margin: 20px;
+}
+
+#listp{
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    }
+
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+
+.nofo{
+    /* text-align: center;
+    border: 1px solid rebeccapurple; */
+    color: brown;
+    background-color:whitesmoke
+
+}

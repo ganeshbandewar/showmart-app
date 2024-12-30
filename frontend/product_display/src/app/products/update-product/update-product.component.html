@@ -1,0 +1,36 @@
+
+<!-- <p>add-product works!</p> -->
+<div class="col-md-6 offset-md-3">
+    <p id="listp">update Product</p>
+    <form #addform="ngForm" (ngSubmit)="onSubmit(addform)">
+       
+        <div class="mb-3 marginb">
+            <label >Product Name</label>
+            <input type="text" class="form-control" id="productName"
+            [(ngModel)]="product.productName" name="productName"  pattern="^[A-Za-z]+[A-Za-z ]*$" #name="ngModel" required>
+            <span class="help-block nofo" *ngIf="!name.valid && name.touched">Plese enter valid Name</span>
+        </div>
+        <div class="mb-3 marginb">
+            <label >Product Description</label>
+            <input type="text" class="form-control" id="productDescription"
+            [(ngModel)]="product.productDescription" name="productDescription" pattern="^[A-Za-z]+[A-Za-z ]*$" #description="ngModel" required>
+            <span class="help-block nofo" *ngIf="!description.valid && description.touched">Plese enter valid Description</span>
+        </div>
+        <div class="mb-3 marginb">
+            <label >Product created By</label>
+            <input type="text" class="form-control" id="createdBy"
+            [(ngModel)]="product.createdBy" name="createdBy" pattern="^[A-Za-z]+[A-Za-z ]*$" #createdbyp="ngModel" required>
+            <span class="help-block nofo" *ngIf="!createdbyp.valid && createdbyp.touched">Plese enter valid value</span>
+        </div>
+        <div class="mb-3 marginb">
+            <label >Product updated By</label>
+            <input type="text" class="form-control" id="updatedBy"
+            [(ngModel)]="product.updatedBy" name="updated_by" pattern="^[A-Za-z]+[A-Za-z ]*$" #updatedbyp="ngModel" required>
+            <span class="help-block nofo" *ngIf="!updatedbyp.valid && updatedbyp.touched">Plese enter valid value</span>
+        </div>
+        <button class="btn btn-success marginb" type="submit" [disabled]="!addform.valid">Submit Product</button>
+        <div class="alert alert-success" *ngIf="productUpdated" role="alert">
+            Your product added successfully
+          </div>
+    </form>
+</div>

@@ -1,0 +1,26 @@
+<!-- <p>products-list works!</p> -->
+<div>
+    <div>
+        <p id="listp">ProductsList</p>
+    </div>
+    <div>
+        <table class="table table-striped table-bordered table-sm row-border table-hover">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Description</th>
+                    <th>Created By</th>
+                    <th>Updated By</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{product.productName}}</td>
+                    <td>{{product.productDescription}}</td>
+                    <td>{{product.createdBy}}</td>
+                    <td>{{product.updatedBy}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
